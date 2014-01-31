@@ -344,20 +344,42 @@ li li:last-child {
 
 @media screen and (max-width:480px) {
 
+/* Mobile: Columns */
+
 #main-nav li ul li, #main-nav.col1 li, #main-nav.col2 li, #main-nav.col3 li, #main-nav.col4 li, #main-nav.col5 li, #main-nav.col6 li, #main-nav.col7 li, #main-nav.col8 li, #main-nav.col9 li, #main-nav.col10 li {
 	width:100%;
 }
+
+/* Mobile: General */
 
 body {
 	padding: 30px;
 	min-width: 320px;
 }
 
-p {
-	margin-right: 40px;
+/* Mobile: Rules */
+
+.mobile-rule:before, .mobile-rule:after {
+	content: '';
+	position: absolute;
+	background-color: #CCCCCC;
 }
 
-.top-rule:before, .top-rule:after {
+.mobile-rule:after {
+	height: 1px;
+	width: 15px;
+	margin-top: 11px;
+	margin-left: -12px;
+}
+
+.mobile-rule:before {
+	height: 100%;
+	top: 12px;
+	width: 1px;
+	margin-left: -12px;
+}
+
+.top-rule:before, .top-rule:after, .secondary-rule:before, .secondary-rule:after {
 	display: none;
 }
 
@@ -369,28 +391,49 @@ li li:last-child {
 	padding-bottom: 50px !important;
 }
 
+li li li:last-child {
+	padding-bottom: 0 !important;
+}
+
 li li li:last-child .horizontal-rule:before {
 	display: none;
 }
 
-li li li:last-child {
-		padding-bottom: 0 !important;
+#secondary-nav li:last-child .mobile-rule:before, #footer-nav li:last-child .mobile-rule:before {
+	display: none;
 }
 
-/*
-#main-nav ul:last-child li:last-child {
-	background-color: red;
+.last li:last-child .horizontal-rule:before {
+	display: none;
 }
-*/
 
-#nav-wrapper {
+/* Mobile: Secondary & Footer Navigation */
+
+#nav-wrapper, #footer-wrapper {
 	width: 100%;
 	left: 0;
 	top: 0;
 }
 
-#secondary-nav {
+#secondary-nav, #footer-nav {
 	position: inherit;
+	padding: 0 0 30px 19px;
 }
+
+#secondary-nav .mobile-secondary-nav, #footer-nav .mobile-secondary-nav {
+	margin-left: -12px;
+}
+
+#secondary-nav p, #footer-nav p {
+	padding: 0 0 10px 0;
+	margin-left: 20px;
+}
+
+#nav-wrapper #secondary-nav li, #footer-wrapper #footer-nav li {
+	display: block;
+	padding-bottom: 20px;
+	margin-bottom: -20px;
+}
+
 
 }
