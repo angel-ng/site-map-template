@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px"
+	 height="19px" viewBox="0 0 15 19" enable-background="new 0 0 15 19" xml:space="preserve">
+<symbol  id="Large_icon" viewBox="-9 -9 15 19">
+	<polygon fill="#2D2D2D" points="6,-9 -7,-9 -7,8 3.5,8.242 6,5.854 	"/>
+	<polygon fill="#FFFFFF" stroke="#2D2D2D" stroke-miterlimit="10" points="4.5,-7.5 -8.5,-7.5 -8.5,9.5 1.5,9.5 4.5,6.612 	"/>
+	<g>
+		<polygon fill="#2D2D2D" points="2,3 -6,3 -6,4 2,4 		"/>
+		<polygon fill="#2D2D2D" points="2,0 -6,0 -6,1 2,1 		"/>
+		<polygon fill="#2D2D2D" points="2,-3 -6,-3 -6,-2 2,-2 		"/>
+	</g>
+	<polygon fill="#FFFFFF" points="6,8.656 5.657,10 1.685,10 6,5.73 	"/>
+	<polygon display="none" fill="none" points="-9,10 6,10 6,-9 -9,-9 	"/>
+</symbol>
+<g id="Guides">
+</g>
+<g id="Artwork">
+	<g id="Small_Doc_icon">
+	</g>
+	<g id="Thin_arrow">
+	</g>
+	<g id="Small_Doc_icon_1_">
+	</g>
+	
+		<use xlink:href="#Large_icon"  width="15" height="19" id="XMLID_1_" x="-9" y="-9" transform="matrix(1 0 0 -1 9 10)" overflow="visible"/>
+</g>
+</svg>
