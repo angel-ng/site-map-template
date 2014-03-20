@@ -119,7 +119,7 @@ ol, ul {
 }
 
 p {
-	margin-right: 90px;
+	margin-right: 10%;
 	color: #777777;
 	font-weight: 300;
 	padding-left: 22px;
@@ -248,14 +248,15 @@ li li:last-child {
 }
 
 #main-nav li h3 {
-	background: url('./assets/page-lg.svg') left center no-repeat;
+	background: url('./assets/page-lg.svg') left top no-repeat;
 	padding-left: 22px;
 }
 
 #main-nav li h4 {
-	background: url('./assets/page-sm.svg') left center no-repeat;
+	background: url('./assets/page-sm.svg') left top no-repeat;
 	padding-left: 22px;
 	margin-left: 19px;
+	margin-top: 2px;
 }
 
 #main-nav li a {
