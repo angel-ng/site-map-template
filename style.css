@@ -1,4 +1,4 @@
-/* Reset */
+/* CSS Reset */
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -70,7 +70,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 body {
 	background: white;
 	color: black;
-	padding: 60px;
+	padding: 30px;
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 	font-size: 13px;
 	line-height: 1.5;
@@ -87,7 +87,7 @@ body {
 h1 {
 	font-weight: bold;
 	text-transform: uppercase;
-	font-size: 19px;
+	font-size: 18px;
 	margin: 0 0 5px 0;
 	letter-spacing: 0.5px;
 }
@@ -97,7 +97,7 @@ h2 {
 }
 
 h3 {
-	font-size: 18px;
+	font-size: 17px;
 }
 
 h4 {
@@ -216,7 +216,9 @@ header {
 	display: none;
 }
 
-li li:last-child .horizontal-rule:before {
+#main-nav > li > ul > li:last-child > .horizontal-rule:before, 
+#main-nav > li > ul > li > ul > li:last-child .horizontal-rule:before, 
+#main-nav > li > ul:last-child > li:last-child > ul > li:last-child > .horizontal-rule:before {
 	display: none;
 }
 
