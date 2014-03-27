@@ -21,67 +21,58 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 /* Columns */
 
-#main-nav li ul li {
+#MainNav li ul li {
 	width:100% !important;
 }
 
-#main-nav.col1 li {
+#MainNav.col1 li {
 	width:99.9%;
 }
 
-#main-nav.col2 li {
+#MainNav.col2 li {
 	width:50.0%;
 }
 
-#main-nav.col3 li {
+#MainNav.col3 li {
 	width:33.3%;
 }
 
-#main-nav.col4 li {
+#MainNav.col4 li {
 	width:25.0%;
 }
 
-#main-nav.col5 li {
+#MainNav.col5 li {
 	width:20.0%;
 }
 
-#main-nav.col6 li {
+#MainNav.col6 li {
 	width:16.6%;
 }
 
-#main-nav.col7 li {
+#MainNav.col7 li {
 	width:14.2%;
 }
 
-#main-nav.col8 li {
+#MainNav.col8 li {
 	width:12.5%;
 }
 
-#main-nav.col9 li {
+#MainNav.col9 li {
 	width:11.1%;
 }
 
-#main-nav.col10 li {
+#MainNav.col10 li {
 	width:10.0%;
 }
 
 /* General */
 
 body {
-	background: white;
-	color: black;
 	padding: 30px;
 	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 	font-size: 13px;
 	line-height: 1.5;
-	font-weight: 400;
 	min-width: 1024px;
-}
-
-.sitemap {
-	margin: 0 0 40px 0;
-	float: left;
-	width: 100%;
 }
 
 h1 {
@@ -115,7 +106,6 @@ a:hover {
 
 ol, ul {
 	list-style: none;
-	margin-bottom: 20px;
 }
 
 p {
@@ -132,6 +122,10 @@ p {
 
 header {
 	margin-bottom: 60px;
+}
+
+#SiteMap {
+	margin: 0 0 40px 0;
 }
 
 /* Rules  */
@@ -152,13 +146,13 @@ header {
 	position: relative;
 }
 
-.top-rule:before, .top-rule:after, .vertical-rule:before, .horizontal-rule:before, .horizontal-rule:after, .secondary-rule:before, .secondary-rule:after {
+.branch-parent:before, .branch-parent:after, .branch-first-child:before, .branch-children:before, .branch-children:after, .branch-secondary:before, .branch-secondary:after {
 	content: '';
 	position: absolute;
 	background-color: #CCCCCC;
 }
 
-.top-rule:after {
+.branch-parent:after {
 	height: 1px;
 	width: 100%;
 	top: -45px;
@@ -166,7 +160,7 @@ header {
 	background-color: #CCCCCC;
 }
 
-.top-rule:before {
+.branch-parent:before {
 	height: 49px;
 	top: -45px;
 	right: -8px;
@@ -174,28 +168,28 @@ header {
 	background-color: #CCCCCC;
 }
 
-.vertical-rule:before {
+.branch-first-child:before {
 	height: 100%;
 	top: -4px;
 	width: 1px;
 	margin-left: 7px;
 }
 
-.horizontal-rule:after {
+.branch-children:after {
 	height: 1px;
 	width: 15px;
 	margin-top: 11px;
 	margin-left: 7px;
 }
 
-.horizontal-rule:before {
+.branch-children:before {
 	height: 100%;
 	top: 12px;
 	width: 1px;
 	margin-left: 7px;
 }
 
-.secondary-rule:after {
+.branch-secondary:after {
 	margin-top: -20px;
 	margin-left: 7px;
 	height: 1px;
@@ -204,7 +198,7 @@ header {
 	padding-right: 53px;
 }
 
-.secondary-rule:before {
+.branch-secondary:before {
 	margin-top: -20px;
 	height: 28px;
 	width: 1px;
@@ -212,135 +206,141 @@ header {
 	background-color: #CCCCCC;
 }
 
-.main-level:last-child .vertical-rule:before {
+.main-level:last-child .branch-first-child:before {
 	display: none;
 }
 
-#main-nav > li > ul > li:last-child > .horizontal-rule:before, 
-#main-nav > li > ul > li > ul > li:last-child .horizontal-rule:before, 
-#main-nav > li > ul:last-child > li:last-child > ul > li:last-child > .horizontal-rule:before {
+#MainNav > li > ul > li:last-child > .branch-children:before, 
+#MainNav > li > ul > li > ul > li:last-child .branch-children:before, 
+#MainNav > li > ul:last-child > li:last-child > ul > li:last-child > .branch-children:before {
 	display: none;
 }
 
-#footer-nav li:last-child .secondary-rule:after, #secondary-nav li:last-child .secondary-rule:after {
+#FooterNav li:last-child .branch-secondary:after, #SecondaryNav li:last-child .branch-secondary:after {
 	display: none;
 }
 
+/*
 li li:last-child {
 	padding-bottom: 0 !important;
+	background-color: red;
 }
+*/
 
 /* Main Navigation  */
 
-#main-nav {
-	float: left;
-	width: 100%;
+#MainWrapper{
+	overflow: hidden;
+	margin: 0 0 40px 0;
 }
 
-#main-nav #home {
-	display: block;
+#MainNav {
+	overflow: hidden;
+}
+
+#MainNav #Home {
 	float: none;
 }
 
-#main-nav li {
+#MainNav li {
 	float: left;
 	position: relative;
 }
 
-#main-nav li h3 {
+#MainNav li h3 {
 	background: url('./assets/page-lg.svg') left top no-repeat;
 	padding-left: 22px;
 }
 
-#main-nav li h4 {
+#MainNav li h4 {
 	background: url('./assets/page-sm.svg') left top no-repeat;
 	padding-left: 22px;
 	margin-left: 19px;
 	margin-top: 2px;
 }
 
-#main-nav li a {
+#MainNav li a {
 	display: block;
 }
 
 
 /* Inner Navigation */
 
-#main-nav li li {
+#MainNav li li {
 	width: 100%;
 	padding-bottom: 20px;
 }
 
-#main-nav li li p {
+#MainNav li li p {
 	margin-left: 19px;
 }
 
 /* Inner Inner Navigation */
 
-#main-nav li li ul {
+#MainNav li li ul {
 	width: 100%;
 }
 
-#main-nav ul ul {
+#MainNav ul ul {
 	margin: 0 0 0 19px;
 }
 
-#main-nav li li li a {
+#MainNav li li li a {
 	width: 80%;
 }
 
 /* Secondary Navigation */
 
-#nav-wrapper {
+#SecondaryWrapper {
 	position: relative;
 	width: 75%;
 	left: 25%;
 	top: 6px;
 }
 
-#secondary-nav {
+#SecondaryNav {
 	position: absolute;
 }
 
-#secondary-nav p {
+#SecondaryNav p {
 	padding: 0 0 40px 7px;
 }
 
-#nav-wrapper #secondary-nav li {
+#SecondaryWrapper #SecondaryNav li {
 	display: inline-block;
 	padding-right: 50px;
 }
 
-#nav-wrapper #secondary-nav li:last-child {
+#SecondaryWrapper #SecondaryNav li:last-child {
 	padding-right: 0;
 }
 
-#nav-wrapper #secondary-nav li h4 {
+#SecondaryWrapper #SecondaryNav li h4 {
 	background: url('./assets/link-sm.svg') left center no-repeat;
 	padding-left: 22px;
 }
 
 /* Footer */
 
-#footer-wrapper {
+#FooterWrapper {
 	position: relative;
 	width: 100%;
 }
 
-#footer-nav p {
+#FooterNav p {
 	padding: 0 0 40px 7px;
 }
 
-#footer-nav li {
+#FooterNav li {
 	display: inline-block;
 	padding-right: 50px;
 }
 
-#footer-nav li:last-child {
+#FooterNav li:last-child {
 	padding-right: 0;
 }
 
-#footer-nav li h4 {
+#FooterNav li h4 {
 	background: url('./assets/link-sm.svg') left center no-repeat;
 	padding-left: 22px;
 }
@@ -349,7 +349,7 @@ li li:last-child {
 
 /* Mobile: Columns */
 
-#main-nav li ul li, #main-nav.col1 li, #main-nav.col2 li, #main-nav.col3 li, #main-nav.col4 li, #main-nav.col5 li, #main-nav.col6 li, #main-nav.col7 li, #main-nav.col8 li, #main-nav.col9 li, #main-nav.col10 li {
+#MainNav li ul li, #MainNav.col1 li, #MainNav.col2 li, #MainNav.col3 li, #MainNav.col4 li, #MainNav.col5 li, #MainNav.col6 li, #MainNav.col7 li, #MainNav.col8 li, #MainNav.col9 li, #MainNav.col10 li {
 	width:100%;
 }
 
@@ -362,31 +362,31 @@ body {
 
 /* Mobile: Rules */
 
-.mobile-rule:before, .mobile-rule:after {
+.branch-mobile:before, .branch-mobile:after {
 	content: '';
 	position: absolute;
 	background-color: #CCCCCC;
 }
 
-.mobile-rule:after {
+.branch-mobile:after {
 	height: 1px;
 	width: 15px;
 	margin-top: 11px;
 	margin-left: -12px;
 }
 
-.mobile-rule:before {
+.branch-mobile:before {
 	height: 100%;
 	top: 12px;
 	width: 1px;
 	margin-left: -12px;
 }
 
-.top-rule:before, .top-rule:after, .secondary-rule:before, .secondary-rule:after {
+.branch-parent:before, .branch-parent:after, .branch-secondary:before, .branch-secondary:after {
 	display: none;
 }
 
-li li:last-child .horizontal-rule:before {
+li li:last-child .branch-children:before {
 	display: inline;
 }
 
@@ -398,41 +398,41 @@ li li li:last-child {
 	padding-bottom: 0 !important;
 }
 
-li li li:last-child .horizontal-rule:before {
+li li li:last-child .branch-children:before {
 	display: none;
 }
 
-#secondary-nav li:last-child .mobile-rule:before, #footer-nav li:last-child .mobile-rule:before {
+#SecondaryNav li:last-child .branch-mobile:before, #FooterNav li:last-child .branch-mobile:before {
 	display: none;
 }
 
-.last li:last-child .horizontal-rule:before {
+.last li:last-child .branch-children:before {
 	display: none;
 }
 
 /* Mobile: Secondary & Footer Navigation */
 
-#nav-wrapper, #footer-wrapper {
+#SecondaryWrapper, #FooterWrapper {
 	width: 100%;
 	left: 0;
 	top: 0;
 }
 
-#secondary-nav, #footer-nav {
+#SecondaryNav, #FooterNav {
 	position: inherit;
 	padding: 0 0 30px 19px;
 }
 
-#secondary-nav .mobile-secondary-nav, #footer-nav .mobile-secondary-nav {
+#SecondaryNav .mobile-SecondaryNav, #FooterNav .mobile-SecondaryNav {
 	margin-left: -12px;
 }
 
-#secondary-nav p, #footer-nav p {
+#SecondaryNav p, #FooterNav p {
 	padding: 0 0 10px 0;
-	margin-left: 20px;
+	margin-left: -12px;
 }
 
-#nav-wrapper #secondary-nav li, #footer-wrapper #footer-nav li {
+#SecondaryWrapper #SecondaryNav li, #FooterWrapper #FooterNav li {
 	display: block;
 	padding-bottom: 20px;
 	margin-bottom: -20px;
