@@ -146,7 +146,7 @@ header {
 	position: relative;
 }
 
-.branch-parent:before, .branch-parent:after, .branch-first-child:before, .branch-children:before, .branch-children:after, .branch-secondary:before, .branch-secondary:after {
+.branch-parent:before, .branch-parent:after, .branch-first-child:before, .branch-first-child:after, .branch-children:before, .branch-children:after, .branch-secondary:before, .branch-secondary:after {
 	content: '';
 	position: absolute;
 	background-color: #CCCCCC;
@@ -157,7 +157,6 @@ header {
 	width: 100%;
 	top: -45px;
 	margin-left: 7px;
-	background-color: #CCCCCC;
 }
 
 .branch-parent:before {
@@ -165,12 +164,18 @@ header {
 	top: -45px;
 	right: -8px;
 	width: 1px;
-	background-color: #CCCCCC;
+}
+
+.branch-first-child:after {
+	height: 100%;
+	top: 16px;
+	width: 1px;
+	margin-left: 26px;
 }
 
 .branch-first-child:before {
 	height: 100%;
-	top: -4px;
+	top: -5px;
 	width: 1px;
 	margin-left: 7px;
 }
@@ -194,7 +199,6 @@ header {
 	margin-left: 7px;
 	height: 1px;
 	width: 100%;
-	background-color: #CCCCCC;
 	padding-right: 53px;
 }
 
@@ -203,10 +207,13 @@ header {
 	height: 28px;
 	width: 1px;
 	margin-left: 7px;
-	background-color: #CCCCCC;
 }
 
-.main-level:last-child .branch-first-child:before {
+#MainNav > li > .main-level:last-child > .branch-first-child:before,
+#MainNav > li > ul > li > div > .branch-first-child:before,
+#MainNav > li > ul > li > ul > li > ul > div > .branch-first-child:after,
+.home-level > .branch-first-child:after,
+.main-level > .branch-first-child:after {
 	display: none;
 }
 
