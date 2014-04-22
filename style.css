@@ -212,7 +212,8 @@ header {
 
 #MainNav > li > ul > li:last-child > .branch-children:before, 
 #MainNav > li > ul > li > ul > li:last-child .branch-children:before, 
-#MainNav > li > ul:last-child > li:last-child > ul > li:last-child > .branch-children:before {
+#MainNav > li > ul:last-child > li:last-child > ul > li:last-child > .branch-children:before,
+#MainNav > li > ul > li > ul > li > ul > li:last-child > .branch-children:before {
 	display: none;
 }
 
